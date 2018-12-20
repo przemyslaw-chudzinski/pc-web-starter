@@ -1,0 +1,17 @@
+{
+  "name": "workflow-blank",
+  "version": "1.0.0",
+  "description": "Starter for building modern websites",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "",
+    "start": ""
+  },
+  "keywords": [],
+  "author": "Przemysław Chudziński przemyslawchudzinski.pl",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  }
+}
