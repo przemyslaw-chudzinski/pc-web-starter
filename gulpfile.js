@@ -3,11 +3,12 @@ require('./dev-scripts/sass');
 require('./dev-scripts/javascript');
 require('./dev-scripts/templates');
 require('./dev-scripts/server');
+require('./dev-scripts/images');
 
 function buildDev(cb) {
     cb = cb || function () {};
-    parallel('js:dev', 'sass:dev', 'tpl:compile')();
-    parallel('js:watch', 'sass:watch', 'tpl:watch')();
+    parallel('js:dev', 'sass:dev', 'tpl:compile', 'images:copy')();
+    parallel('js:watch', 'sass:watch', 'tpl:watch', 'images:watch')();
     series('server:run')();
     cb();
 }
