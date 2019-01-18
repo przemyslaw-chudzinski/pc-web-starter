@@ -1,9 +1,9 @@
 const {task, series, parallel} = require('gulp');
-require('./dev-scripts/sass');
-require('./dev-scripts/javascript');
-require('./dev-scripts/templates');
-require('./dev-scripts/server');
-require('./dev-scripts/images');
+require('./core/sass');
+require('./core/javascript');
+require('./core/templates');
+require('./core/server');
+require('./core/images');
 
 function buildDev(cb) {
     cb = cb || function () {};
@@ -14,7 +14,7 @@ function buildDev(cb) {
 }
 function buildProd(cb) {
     cb = cb || function () {};
-    parallel('js:prod', 'sass:prod')();
+    parallel('js:prod', 'sass:prod', 'images:copy')();
     cb();
 }
 
